@@ -1,0 +1,93 @@
+{% extends "base.html"%}
+{% block main %}
+  <main class="container mt-3">
+    <div class="card my-4 mx-auto">
+      <div class="card-body m-2 m-md-4">
+        <article class="row">
+          <div class="col-5"><img src="{{ data.picture }}"  class="img-fluid" alt=""></div>
+          <div class="col-7">
+
+            <section class="teacher=info">
+
+              <h1 class="h2">{{ data.name }}</h1>
+
+              <p> {% for i in data.goals %} <span class="badge badge-secondary mr-2">{{ data_goals[i] }}  </span> {% endfor %}Рейтинг: {{ data.rating }} Ставка: {{ data.price }} / час</p>
+              <p>{{ data.about }}</p>
+
+            </section>
+
+            <section class="available">
+
+              <h4 class="mb-4 mt-5">Записаться на пробный урок</h4>
+
+
+              <h6 class="mt-4">Понедельник</h6>
+              {% for k, v in data.free.mon.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/mon/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+
+              <h6 class="mt-4">Вторник</h6>
+              {% for k, v in data.free.tue.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/tue/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+
+              <h6 class="mt-4">Среда</h6>
+              {% for k, v in data.free.wed.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/wed/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+
+              <h6 class="mt-4">Четверг</h6>
+
+              {% for k, v in data.free.thu.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/thu/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+
+              <h6 class="mt-4">Пятница</h6>
+              {% for k, v in data.free.fri.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/fri/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+              <h6 class="mt-4">Суббота</h6>
+              {% for k, v in data.free.sat.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/sat/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+              <h6 class="mt-4">Воскресенье</h6>
+              {% for k, v in data.free.sun.items() %}
+                {% if v==false %}
+                <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
+                {% else %}
+                <a href="/booking/{{ data.id }}/sun/{{ k }}/ " class="btn btn-outline-success mr-2">{{ k }} свободно</a>
+                {% endif %}
+              {% endfor%}
+            </section>
+
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+  {% endblock %}

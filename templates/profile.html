@@ -22,7 +22,7 @@
 
 
               <h6 class="mt-4">Понедельник</h6>
-              {% for k, v in data.free.mon.items() %}
+              {% for k, v in data.mon.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
@@ -31,7 +31,7 @@
               {% endfor%}
 
               <h6 class="mt-4">Вторник</h6>
-              {% for k, v in data.free.tue.items() %}
+              {% for k, v in data.tue.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
@@ -40,7 +40,7 @@
               {% endfor%}
 
               <h6 class="mt-4">Среда</h6>
-              {% for k, v in data.free.wed.items() %}
+              {% for k, v in data.wed.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
@@ -50,7 +50,7 @@
 
               <h6 class="mt-4">Четверг</h6>
 
-              {% for k, v in data.free.thu.items() %}
+              {% for k, v in data.thu.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
@@ -59,7 +59,7 @@
               {% endfor%}
 
               <h6 class="mt-4">Пятница</h6>
-              {% for k, v in data.free.fri.items() %}
+              {% for k, v in data.fri.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
@@ -67,7 +67,7 @@
                 {% endif %}
               {% endfor%}
               <h6 class="mt-4">Суббота</h6>
-              {% for k, v in data.free.sat.items() %}
+              {% for k, v in data.sat.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
@@ -75,7 +75,7 @@
                 {% endif %}
               {% endfor%}
               <h6 class="mt-4">Воскресенье</h6>
-              {% for k, v in data.free.sun.items() %}
+              {% for k, v in data.sun.items() %}
                 {% if v==false %}
                 <a href="#" class="btn btn-outline-success mr-2">{{ k }} занято</a>
                 {% else %}
